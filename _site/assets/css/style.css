@@ -106,6 +106,27 @@ a:hover {
   gap: 1rem;
 }
 
+/* Show full logo by default */
+.logo-full {
+  display: inline;
+}
+
+.logo-short {
+  display: none;
+}
+
+/* On small screens, swap logos */
+@media (max-width: 600px) {
+  .logo-full {
+    display: none;
+  }
+  .logo-short {
+    display: inline;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
 /* CTA Banner in Hero */
 .cta-banner {
   margin-top: 2rem;
@@ -245,22 +266,31 @@ h3 {
   background-size: 223%; /* keep natural */
 }
 
-/* Responsive layout */
+/* Mobile-friendly research layout */
 @media (max-width: 768px) {
-  .research-card {
-    flex-direction: column;
+  /* Stack image above text */
+  .research-main {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center the image horizontally */
   }
 
+  /* Full width image */
   .research-image {
+    width: 100%;            /* span container */
+    max-width: 100%;        /* prevent overflow */
+    height: 200px;          /* fixed height for mobile */
+    margin-bottom: 0rem;    /* spacing below image */
+  }
+
+  /* Text takes full width */
+  .research-text {
     width: 100%;
-    height: 200px; /* shorter height for mobile */
-    margin-bottom: 0rem;
   }
 }
 
 .research-card h2 {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 0rem 0;
   color: #990000;
 }
 
