@@ -1,0 +1,503 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #990000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1060px;   /* adjust to taste: 700–1000px works well */
+  margin: 0 auto;     /* centers the content */
+  padding: 0 20px;    /* keeps some breathing room on mobile */
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* aligns content to the top */
+  align-items: center;         /* horizontal center */
+  padding-top: 10px;           /* space from the very top of the hero */
+  min-height: 85vh;            /* keeps hero tall */
+  text-align: center;
+  background: url('/images/annie_title.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgba(0,0,0,0.85);
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.85);
+}
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero title adjustments */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 1000;
+  line-height: 1.2;
+  margin-bottom: 1.2rem; /* decrease space below the title */
+}
+
+.hero p {
+  margin-top: 0; /* remove any extra top margin */
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.site-header {
+  position: sticky;  /* make the header stick to top */
+  top: 0;
+  z-index: 1000;     /* ensure it stays above other content */
+  width: 100%;
+  background-color: white; /* keep background opaque */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1.5rem;
+  height: 60px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+/* CTA Banner in Hero */
+.cta-banner {
+  margin-top: 2rem;
+  background-color: #990000; /* USC red */
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: absolute;
+  bottom: 70px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cta-banner a {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+
+.cta-banner:hover {
+  /*transform: translateY(-3px); */
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+/* Sections */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 50px 20px;
+  scroll-margin-top: 30px; /* height of your sticky navbar */
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  scroll-margin-top: 10px;
+
+}
+
+/* Headings */
+h1, h2 {
+  font-size: 1.7rem;
+  color: #990000;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #990000;
+  margin-bottom: .5rem;
+}
+
+/* Research */
+.research-home p {
+  font-size: 1.2rem;   /* ~20px, larger than body text */
+  line-height: 1.6;
+}
+
+.research-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column; /* stack main + pubs vertically */
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  gap: 1rem;
+}
+
+/* Keep image + text side by side */
+.research-main {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 0rem;
+}
+
+/* Text next to image */
+.research-text {
+  flex: 1;
+  margin-bottom: 0rem;
+}
+
+/* Key publications take full width */
+.research-pubs {
+  width: 100%;
+  margin-top: 0rem;
+}
+
+.research-pubs h3 {
+  margin-top: 0rem;       /* remove any extra top margin */
+  margin-bottom: 0rem; /* space below heading */
+}
+
+/* Square research image container */
+.research-image {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;           /* square, not circle */
+  border: 2px solid #990000;
+  flex-shrink: 0;
+
+  background-size: cover;     /* zoom fill */
+  background-position: center;/* default center crop */
+  background-repeat: no-repeat;
+  margin-bottom: 0rem;
+}
+
+/* Per-image adjustments */
+.img-title {
+  background-image: url('/images/annie_title.jpg');
+  background-position: 94% 0%;
+  background-size: 330%; /* slight zoom in */
+}
+
+.img-window {
+  background-image: url('/images/annie_window.jpg');
+  background-position: 40% center; /* shift focus horizontally */
+  background-size: 125%; /* zoom in more */
+}
+
+.img-laundry {
+  background-image: url('/images/annie_laundry.jpg');
+  background-position: 30% 0%;
+  background-size: 223%; /* keep natural */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column;
+  }
+
+  .research-image {
+    width: 100%;
+    height: 200px; /* shorter height for mobile */
+    margin-bottom: 0rem;
+  }
+}
+
+.research-card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #990000;
+}
+
+.research-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: .5rem;
+}
+
+/* Optional: responsive for smaller screens */
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column;  /* stack image on top for mobile */
+  }
+
+  .research-card img.research-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Research publications */
+.research-pubs h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.research-pubs ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.research-pubs li {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.research-pubs .pub-badge {
+  margin-left: 6px;
+}
+
+/* People section layout */
+.people-layout {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr; /* two equal columns */
+  gap: 1rem;
+  align-items: start; /* align content at the top */
+}
+
+.people-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1.2rem;
+}
+
+.people-text p {
+  margin-top: 0rem;
+}
+
+/* Make it stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .people-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.person-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem; /* space between photo and text */
+  margin-bottom: 0rem;
+}
+
+.person-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #990000; /* optional USC red border */
+  flex-shrink: 0; /* keeps the photo size fixed */
+}
+
+.person-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  color: #990000;
+}
+
+.person-info div {
+  margin-bottom: 0rem;
+}
+
+.person-info p {
+  margin-top: .5rem;
+  margin-bottom: 0rem;
+}
+
+.person-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.person-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.person-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #990000;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.person-badge:hover {
+  background-color: #e0e0e0;
+}
+
+/* Publications */
+/*#publications ul li {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#publications ul li:hover {
+  transform: translateX(5px);
+  color: #990000;
+}*/
+
+/* Publications grid */
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  align-items: start;
+}
+
+.publication-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.publication-card h3 {
+  font-size: 1.2rem;
+  color: #990000;
+  margin-top: 0rem;
+  margin-bottom: 0.3rem;
+}
+
+.publication-item h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.pub-reference {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.pub-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #990000;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.pub-badge:hover {
+  background-color: #e0e0e0;
+}
+
+.more-container {
+  display: flex;
+  /* justify-content: flex-end; /* right aligned by default */
+  margin-top: 1rem;
+}
+
+.more-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #f9f9f9; /* match cards */
+  color: #990000;            /* USC red */
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.more-button:hover {
+  background-color: #ececec;
+  color: #b30000; /* darker USC red */
+}
+
+#all-publications h2 {
+  margin-top: -20px;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+  margin-bottom: 0rem;
+}
+
+.site-footer p {
+  margin: 0;        /* removes all default top/bottom margins */
+  padding: 0;       /* optional, ensures no padding */
+}
+
+.site-footer .footer-credit {
+  font-size: 0.6rem;         /* smaller font */
+  color: #666;               /* lighter gray */
+  margin-top: 0.2rem;       /* small space below copyright */
+}

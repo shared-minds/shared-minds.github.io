@@ -1,0 +1,144 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #990000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* aligns content to the top */
+  align-items: center;         /* horizontal center */
+  padding-top: 10px;           /* space from the very top of the hero */
+  min-height: 80vh;            /* keeps hero tall */
+  text-align: center;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a0/Orphant_Annie_Book_%E2%80%93_Title_page.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgba(0,0,0,0.85);
+  position: relative;
+  /*text-align: center;
+  /*padding: 260px 20px;
+  /*background: url('https://upload.wikimedia.org/wikipedia/commons/a/a0/Orphant_Annie_Book_%E2%80%93_Title_page.jpg') no-repeat center top;
+  /*background-size: cover;
+  /*color: rgba(0,0,0,1);
+  /*position: relative;*/
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.85);
+}
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
+}
+/* Hero title adjustments */
+.hero h1 {
+  font-size: 4rem;       /* larger title */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Sections */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  padding: 60px 20px;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings */
+h1, h2 {
+  color: #990000;
+  margin-bottom: 1rem;
+}
+
+/* People grid */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.person-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.person-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Publications */
+#publications ul li {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#publications ul li:hover {
+  transform: translateX(5px);
+  color: #990000;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+}
+

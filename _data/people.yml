@@ -1,0 +1,11 @@
+- name: Samuel A. Nastase
+  investigator: Principal Investigator
+  title: Assistant Professor of Psychology
+  email: snastase@usc.edu
+  website: https://snastase.github.io
+  shortbio: Sam Nastase is an Assistant Professor of Psychology and director of the Shared Minds Lab at the University of Southern California. His expertise combines naturalistic neuroimaging and deep learning to better understand how the brain supports communication in real-world contexts.
+  photo: /images/nastase_photo.jpg 
+- name: Jane Doe
+  title: Research Assistant
+# Add more lab members here
+

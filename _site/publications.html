@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | Shared Minds Lab</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="navbar">
+    <a href="/" class="logo">Shared Minds Lab</a>
+    <ul class="nav-links">
+      <li><a href="/#research">Research</a></li>
+      <li><a href="/#people">People</a></li>
+      <li><a href="/#publications">Publications</a></li>
+      <li><a href="/#join">Join</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+  <main>
+    <section id="all-publications">
+  <div class="container">
+    <h2>Selected publications</h2>
+    <div class="publications-list">
+	  
+	  
+        
+        
+          <div class="publication-item">
+            <h3>A shared model-based linguistic space for transmitting our thoughts from brain to brain in natural conversations</h3>
+            <p class="pub-reference">
+  		      Zada, Z., Goldstein, A. Y., Michelmann, S., Simony, E., Price, A., Hasenfratz, L., Barham, E., Zadbood, A., Doyle, W., Friedman, D., Dugan, P., Melloni, L., Devore, S., Flinker, A., Devinsky, O., Hasson, U.*, &amp; Nastase, S. A.* (2024). A shared model-based linguistic space for transmitting our thoughts from brain to brain in natural conversations. <em>Neuron</em>, <em>112</em>(18), 3211–3222.
+
+                <a href="https://doi.org/10.1016/j.neuron.2024.06.025" target="_blank" class="pub-badge">DOI</a>
+                <a href="https://snastase.github.io/files/Zada_Neuron_2024.pdf" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        
+      
+        
+        
+          <div class="publication-item">
+            <h3>Shared functional specialization in transformer-based language models and the human brain</h3>
+            <p class="pub-reference">
+  		      Kumar, S.*, Sumers, T. R.*, Yamakoshi, T., Goldstein, A., Hasson, U., Norman, K. A., Griffiths, T. L., Hawkins, R. D., &amp; Nastase, S. A. (2024). Shared functional specialization in transformer-based language models and the human brain. <em>Nature Communications</em>, <em>15</em>, 5523.
+
+                <a href="https://doi.org/10.1038/s41467-024-49173-5" target="_blank" class="pub-badge">DOI</a>
+                <a href="https://snastase.github.io/files/Kumar_NatCommun_2024.pdf" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        
+      
+        
+        
+          <div class="publication-item">
+            <h3>The “Narratives” fMRI dataset for evaluating models of naturalistic language comprehension</h3>
+            <p class="pub-reference">
+  		      Nastase, S. A., Liu, Y.-F., Hillman, H., Zadbood, A., Hasenfratz, L., Keshavarzian, N., Chen, J., Honey, C. J., Yeshurun, Y., Regev, M., Nguyen, M., Chang, C. H. C., Baldassano, C., Lositsky, O., Simony, E., Chow, M. A., Leong, Y. C., Brooks, P. P., Micciche, E., Choe, G., Goldstein, A., Vanderwal, T., Halchenko, Y. O., Norman, K. A., &amp; Hasson, U. (2021). The “Narratives” fMRI dataset for evaluating models of naturalistic language comprehension. <em>Scientific Data</em>, <em>8</em>, 250.
+
+                <a href="https://doi.org/10.1038/s41597-021-01033-3" target="_blank" class="pub-badge">DOI</a>
+                <a href="https://snastase.github.io/files/Nastase_SciData_2021.pdf" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        
+      
+        
+        
+          <div class="publication-item">
+            <h3>Keep it real: rethinking the primacy of experimental control in cognitive neuroscience</h3>
+            <p class="pub-reference">
+  		      Nastase, S. A., Goldstein, A., &amp; Hasson, U. (2020). Keep it real: rethinking the primacy of experimental control in cognitive neuroscience. <em>NeuroImage</em>, <em>222</em>, 117254.
+
+                <a href="https://doi.org/10.1016/j.neuroimage.2020.117254" target="_blank" class="pub-badge">DOI</a>
+                <a href="https://snastase.github.io/files/Nastase_NIMG_2020a.pdf" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        
+      
+        
+        
+          <div class="publication-item">
+            <h3>Measuring shared responses across subjects using intersubject correlation</h3>
+            <p class="pub-reference">
+  		      Nastase, S. A., Gazzola, V., Hasson, U., &amp; Keysers, C. (2019). Measuring shared responses across subjects using intersubject correlation. <em>Social Cognitive and Affective Neuroscience</em>, <em>14</em>(6), 667–685.
+
+                <a href="https://doi.org/10.1093/scan/nsz037" target="_blank" class="pub-badge">DOI</a>
+                <a href="https://snastase.github.io/files/Nastase_SCAN_2019.pdf" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        
+      
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <p>© 2025 Shared Minds Lab | University of Southern California</p>
+  <p class="footer-credit">Art by Ethel Franklin Betts from <em>The Orphant Annie Book</em> (1908) by James Whitcomb Riley</p>
+</footer>
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+
+    // IntersectionObserver for fade/slide-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Handle navbar anchor clicks to trigger animations
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function(e) {
+        const href = this.getAttribute("href");
+        if (href.startsWith("#")) {
+          const target = document.querySelector(href);
+          if (target) {
+            // Delay to allow browser scroll to target first
+            setTimeout(() => {
+              target.classList.add("visible");
+            }, 50);
+          }
+        }
+      });
+    });
+  });
+
+  // Parallax effect for hero section
+  document.addEventListener("scroll", function() {
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      const scrollY = window.scrollY;
+      hero.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+    }
+  });
+  </script>
+</body>
+</html>
+

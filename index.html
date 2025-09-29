@@ -1,0 +1,103 @@
+---
+layout: default
+title: Home
+---
+
+<section id="home" class="hero">
+  <h1>Shared Minds Lab</h1>
+  <p>Department of Psychology&nbsp;&nbsp;|&nbsp;&nbsp;University of Southern California</p>
+
+  <div class="cta-banner">
+    <a href="#join">We are recruiting PhD students to start in Fall 2026!</a>
+  </div>
+</section>
+
+<section id="research" class="research-home">
+  <div class="container">
+    <h2>Research</h2>
+    <p><b>How do individual brains converge on a shared understanding of the world?</b> // <b>How do we use language to transmit our thoughts from one brain to another?</b> // <b>How do we coordinate our own behavior with the actions of others?</b> <br>The <b><span style="color: #990000;">Shared Minds Lab</span></b> aims to understand how our brains communicate, cooperate, and ultimately coordinate our collective behavior in real-world contexts. Our work combines elements of ecological psychology, deep learning, and cognitive neuroscience to explore how we become aligned.</p>
+    <div class="more-container">
+      <a href="{{ '/research' | relative_url }}" class="more-button">Learn more →</a>
+    </div>
+  </div>
+
+</section>
+
+<section id="people">
+  <div class="container people-section">
+    <h2>People</h2>
+    <div class="people-layout">
+      
+	  {% assign pi = site.data.people[0] %}
+      <div class="person-card">
+        <div class="person-card-content">
+          <img src="{{ pi.photo | relative_url }}" alt="{{ pi.name }}" class="person-photo">
+          <div class="person-info">
+            <h3>{{ pi.name }}</h3>
+          <div>
+            <b>{{ pi.investigator }}</b>
+            <a href="mailto:{{ pi.email }}" target="_blank" class="person-badge">email</a>
+            <a href="{{ pi.website }}" target="_blank" class="person-badge">website</a>
+          </div>
+          <p>{{ pi.shortbio }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="people-text">
+      <h3>Under construction!</h3>
+      <p>
+        The <b>Shared Minds Lab</b> is just getting started. We’re hoping to build our team of students, postdocs, and collaborators over the next couple years. If you’re interested in <a href="#join">joining</a> the lab, please reach out!
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <h2>Publications</h2>
+    <div class="publications-grid">
+	  {% assign key_pubs = "zada2024neuron,kumar2024natcommun" | split: "," %}
+	  {% for pub_id in key_pubs %}
+        {% assign pub = site.data.publications | where: "id", pub_id | first %}
+        {% if pub %}
+          <div class="publication-card">
+            <h3>{{ pub.title }}</h3>
+            <p class="pub-reference">
+  		    {{ pub.reference | markdownify | remove: '<p>' | remove: '</p>' }}
+              <a href="{{ pub.doi }}" target="_blank" class="pub-badge">DOI</a>
+              <a href="{{ pub.pdf }}" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  
+    <div class="more-container">
+      <a href="{{ '/publications' | relative_url }}" class="more-button">More publications →</a>
+    </div>
+  </div>  
+</section>
+
+<section id="join">
+  <div class="container">
+    <h1>Join</h1>
+    <p><b>The Shared Minds Lab is recruiting PhD students to start in Fall 2026!</b> We welcome inquiries from prospective graduate students, postdocs, and undergraduate researchers interested in joining the lab. Please have a look at some of our recent <a href=#publications>publications</a> and be prepared to discuss how you would expand on them. We look forward to seeing you in the vibrant city of Los Angeles!</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h1>Contact</h1>
+    <div><b>PI: Samuel A. Nastase</b></div>
+    <div>Email: <a href="mailto:snastase@usc.edu">snastase@usc.edu</a></div>
+    <div>Office: SGM 1016</div><br>
+    <div>University of Southern California</div>
+    <div>Department of Psychology</div>
+    <div>3620 McClintock Avenue</div>
+    <div>Los Angeles, CA 90089</div>
+  </div>
+</section>
+
+

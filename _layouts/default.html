@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+
+    // IntersectionObserver for fade/slide-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Handle navbar anchor clicks to trigger animations
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function(e) {
+        const href = this.getAttribute("href");
+        if (href.startsWith("#")) {
+          const target = document.querySelector(href);
+          if (target) {
+            // Delay to allow browser scroll to target first
+            setTimeout(() => {
+              target.classList.add("visible");
+            }, 50);
+          }
+        }
+      });
+    });
+  });
+
+  // Parallax effect for hero section
+  document.addEventListener("scroll", function() {
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      const scrollY = window.scrollY;
+      hero.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+    }
+  });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Publications
+---
+
+<section id="all-publications">
+  <div class="container">
+    <h2>Selected publications</h2>
+    <div class="publications-list">
+	  {% assign key_pubs = "zada2024neuron,kumar2024natcommun,nastase2021scidata,nastase2020neuroimage,nastase2019scan" | split: "," %}
+	  {% for pub_id in key_pubs %}
+        {% assign pub = site.data.publications | where: "id", pub_id | first %}
+        {% if pub %}
+          <div class="publication-item">
+            <h3>{{ pub.title }}</h3>
+            <p class="pub-reference">
+  		      {{ pub.reference | markdownify | remove: '<p>' | remove: '</p>' }}
+                <a href="{{ pub.doi }}" target="_blank" class="pub-badge">DOI</a>
+                <a href="{{ pub.pdf }}" target="_blank" class="pub-badge">PDF</a>
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
