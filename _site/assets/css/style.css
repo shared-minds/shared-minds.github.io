@@ -29,8 +29,10 @@ a:hover {
   padding-top: 10px;           /* space from the very top of the hero */
   min-height: 85vh;            /* keeps hero tall */
   text-align: center;
-  background: url('/images/annie_title.jpg') no-repeat center top;
+  background-image: url('/images/annie_title.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center top;
   background-attachment: fixed;
   color: rgba(0,0,0,0.85);
   position: relative;
@@ -67,6 +69,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background-position: 80% top;   /* focus right edge */
+    background-attachment: scroll;   /* avoid mobile quirks */
+  }
   .hero h1 {
     font-size: 2.75rem;
   }
