@@ -14,7 +14,13 @@
     <!-- Short logo for mobile -->
     <a href="/" class="logo logo-short">SML</a>
 
-    <ul class="nav-links">
+    <!-- Hamburger icon for mobile -->
+    <div class="mobile-menu-icon" id="mobile-menu-toggle">
+      &#9776; <!-- ☰ character -->
+    </div>
+
+    <!-- Add an id so JS can toggle this -->
+    <ul class="nav-links" id="nav-links">
       <li><a href="/#research">Research</a></li>
       <li><a href="/#people">People</a></li>
       <li><a href="/#publications">Publications</a></li>
@@ -22,7 +28,24 @@
       <li><a href="/#contact">Contact</a></li>
     </ul>
   </div>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      // Toggle display between none and flex
+      if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+      } else {
+        navLinks.style.display = "flex";
+        navLinks.style.flexDirection = "column"; // stack links vertically on mobile
+      }
+    });
+  </script>
 </header>
+
 
 
   <main>
@@ -136,7 +159,6 @@
     <div>Los Angeles, CA 90089</div>
   </div>
 </section>
-
 
 
   </main>
