@@ -69,10 +69,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .hero {
-    background-position: 80% top;   /* focus right edge */
-    background-attachment: scroll;   /* avoid mobile quirks */
-  }
   .hero h1 {
     font-size: 2.75rem;
   }
