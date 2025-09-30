@@ -63,6 +63,31 @@ a:hover {
   font-size: 1rem;
 }
 
+/* Default: single line */
+.hero-subtitle {
+  display: inline;
+}
+
+/* Mobile two-line subtitle using a pseudo-element */
+@media (max-width: 600px) {
+  .hero-subtitle {
+    /* hide the original inline text visually, keep element in flow */
+    color: transparent;
+    position: relative; /* not strictly required, but safe */
+  }
+
+  .hero-subtitle::before {
+    content: "Department of Psychology\AUniversity of Southern California";
+    white-space: pre;            /* allow \A to become a line break */
+    display: block;             /* put it on its own block line(s) */
+    color: #333;                /* explicitly set visible color */
+    font-size: 1rem;            /* match normal subtitle size (adjust if needed) */
+    line-height: 1.4;
+    /* optional: preserve bold/red styling if needed */
+    /* font-weight: normal; */
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .hero h1 {
