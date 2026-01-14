@@ -7,7 +7,7 @@ title: Publications
   <div class="container">
     <h2>Selected publications</h2>
     <div class="publications-list">
-	  {% assign key_pubs = "zada2024neuron,kumar2024natcommun,nastase2021scidata,nastase2020neuroimage,nastase2019scan" | split: "," %}
+	  {% assign key_pubs = "bhattacharjee2025natcomputsci,zada2024neuron,kumar2024natcommun,nastase2021scidata,nastase2020neuroimage,nastase2019scan" | split: "," %}
 	  {% for pub_id in key_pubs %}
         {% assign pub = site.data.publications | where: "id", pub_id | first %}
         {% if pub %}
