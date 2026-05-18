@@ -1,8 +1,8 @@
 - id: bhattacharjee2025natcomputsci
   title: Aligning brains into a shared space improves their alignment to large language models
-  reference: Bhattacharjee, A., Zada, Z., Wang, H., Aubrey, B., Doyle, W., Dugan, P., Friedman, D., Devinsky, O., Flinker, A., Ramadge, P. J., Hasson, U., Goldstein, A.*, & Nastase, S. A.* (2025). Aligning brains into a shared space improves their alignment to large language models. *Nature Computational Science*.
+  reference: Bhattacharjee, A., Zada, Z., Wang, H., Aubrey, B., Doyle, W., Dugan, P., Friedman, D., Devinsky, O., Flinker, A., Ramadge, P. J., Hasson, U., Goldstein, A.\*, & Nastase, S. A.\* (2026). Aligning brains into a shared space improves their alignment to large language models. *Nature Computational Science*, *6*, 169–178.
   doi: https://doi.org/10.1038/s43588-025-00900-y
-  pdf: https://snastase.github.io/files/Bhattacharjee_NCS_2025.pdf
+  pdf: https://snastase.github.io/files/Bhattacharjee_NCS_2026.pdf
 
 - id: zada2024neuron
   title: A shared model-based linguistic space for transmitting our thoughts from brain to brain in natural conversations
