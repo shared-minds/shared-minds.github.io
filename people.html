@@ -1,0 +1,87 @@
+---
+layout: default
+title: People
+permalink: /people/
+---
+
+<section id="people-page" class="container">
+  <h1>People</h1>
+  <p class="people-page-intro">
+    The Shared Minds Lab is currently growing. Reach out if you're interested in <a href="{{ '/#join' | relative_url }}">joining the team</a>.
+  </p>
+
+  <div class="people-grid">
+    {% for person in site.data.people %}
+      {% if person.photo %}
+        <div class="person-card">
+          <div class="person-card-content">
+            <img
+              src="{{ person.photo | relative_url }}"
+              alt="{{ person.name }}"
+              class="person-photo"
+            >
+
+			<div class="person-info">
+			  <h3>{{ person.name }}</h3>
+
+			  <div class="person-meta">
+				{% if person.investigator %}
+				  <div><b>{{ person.investigator }}</b></div>
+				{% endif %}
+
+				{% if person.title %}
+				  {% for item in person.title %}
+					<div>{{ item }}</div>
+				  {% endfor %}
+				{% endif %}
+			  </div>
+
+			  <div class="person-links">
+				{% if person.email %}
+				  <a href="mailto:{{ person.email }}" target="_blank" rel="noopener noreferrer" class="person-badge">email</a>
+				{% endif %}
+				{% if person.website %}
+				  <a href="{{ person.website }}" target="_blank" rel="noopener noreferrer" class="person-badge">website</a>
+				{% endif %}
+			  </div>
+
+			  {% if person.bio %}
+				<p>{{ person.bio }}</p>
+			  {% endif %}
+			</div>
+
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="people-additional">
+    <h2>Past mentees</h2>
+
+    <div class="people-list">
+      <p>Zaid Zada (now a postdoc in Alex Huth's lab at UC Berkeley)</p>
+      <p>Ahmad Samara (now a PhD student in Tammy Vanderwal's lab at University of British Columbia)</p>
+      <p>Isaac Christian (now PhD student in Michael Graziano's lab at Princeton University)</p>
+      <p>Yingying Peng (now a PhD student at Hong Kong Polytechnic University)
+      <p>Chanyuan Gu (now an assistant professor at Hong Kong Polytechnic University)
+      <p>Yibei Chen (now a postdoc in Satra Ghosh's lab at MIT)
+      <p>Jane Han (now a PhD student in Jim Haxby's lab at Dartmouth College)
+      <p>Heejung Jung (now a postdoc in Josef Parvizi's lab at Stanford University)
+    </div>
+
+    <h2>Collaborators</h2>
+
+    <div class="people-list">
+      <p>Prof. Uri Hasson, Princeton University</p>
+      <p>Prof. Kenneth A. Norman, Princeton University</p>
+      <p>Prof. James V. Haxby, Dartmouth College</p>
+      <p>Prof. M. Ida Gobbini, University of Bologna</p>
+      <p>Prof. Tamara Vanderwal, University of British Columbia</p>
+      <p>Prof. Ping Li, Hong Kong University of Science and Technology</p>
+    </div>
+  </div>
+
+</section>
+
+

@@ -1,11 +1,30 @@
 - name: Samuel A. Nastase
   investigator: Principal Investigator
-  title: Assistant Professor of Psychology
+  title:
+    - Assistant Professor of Psychology and Neuroscience
+    - Co-director, Center for Computational Language Sciences
   email: snastase@usc.edu
   website: https://snastase.github.io
   shortbio: Sam Nastase is an Assistant Professor of Psychology and director of the Shared Minds Lab at the University of Southern California. His expertise combines naturalistic neuroimaging and deep learning to better understand how the brain supports communication in real-world contexts.
-  photo: /images/nastase_photo.jpg 
-- name: Jane Doe
-  title: Research Assistant
-# Add more lab members here
+  bio: Sam is an Assistant Professor in the Department of Psychology and the Neuroscience Program at USC, as well as director of the Shared Minds Lab. His research focuses on understanding what is shared across individual brains and how we use language to share our thoughts with one another. His expertise combines naturalistic neuroscience (e.g., fMRI, iEEG) and deep learning (e.g., large language models) to better understand how the brain supports communication in real-world contexts. Sam completed his PhD with Jim Haxby at Dartmouth and worked with Uri Hasson and Ken Norman as a postdoc at Princeton.
+  photo: /images/sam.jpg 
+
+- name: Sajjad Torabian
+  title: Postdoctoral Scholar
+  email: torabian@usc.edu
+  website: https://sajjadtorabian.github.io/
+  bio: How do we build representations of others? How do we think about their goals, intentions, and beliefs, and communicate what we build in our minds? In my PhD at UC Irvine, I tackled these questions by designing controlled visual fMRI experiments. Specifically, I studied how the brain categorizes representations of physical versus social events, and how it transitions between the two through degrees of intentions. During my postdoc at USC, using naturalistic experiments and deep learning models, I now investigate how the brain transforms visual stimuli into structured context during social interaction, bridging perception, language, and social cognition.
+  photo: /images/sajjad.jpg
+
+- name: April Luo
+  title: PhD Student
+  email: chaodanl@usc.edu
+  bio: April’s research focuses on computational psychiatry and the use of large language models to analyze brain signals during naturalistic conversation. She is also interested in brain–computer interfaces, particularly speech BCIs. Outside of the lab, she enjoys snowboarding.
+  photo: /images/april.jpg
+
+- name: Landi Jiang
+  title: Undergraduate Research Assistant
+  email: torabian@usc.edu
+  bio: Landi is a senior at USC studying cognitive science. She is interested in conversation and linguistic meaning. Outside of school, she enjoys drawing cartoons, people-watching, and cooking soup.
+  photo: /images/landi.jpg
 

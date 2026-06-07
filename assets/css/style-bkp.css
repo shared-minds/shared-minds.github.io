@@ -10,32 +10,31 @@ a {
   color: #990000;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
 .container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1060px;   /* adjust to taste: 700–1000px works well */
+  margin: 0 auto;     /* centers the content */
+  padding: 0 20px;    /* keeps some breathing room on mobile */
 }
 
 /* Hero section */
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 10px;
-  min-height: 85vh;
+  justify-content: flex-start; /* aligns content to the top */
+  align-items: center;         /* horizontal center */
+  padding-top: 10px;           /* space from the very top of the hero */
+  min-height: 85vh;            /* keeps hero tall */
   text-align: center;
   background-image: url('/images/annie_title.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0,0,0,0.85);
   position: relative;
 }
 
@@ -43,11 +42,10 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,.85);
 }
 
-.hero h1,
-.hero p {
+.hero h1, .hero p {
   position: relative;
   z-index: 1;
 }
@@ -57,11 +55,11 @@ a:hover {
   font-size: 4rem;
   font-weight: 1000;
   line-height: 1.2;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.2rem; /* decrease space below the title */
 }
 
 .hero p {
-  margin-top: 0;
+  margin-top: 0; /* remove any extra top margin */
   font-size: 1rem;
 }
 
@@ -73,21 +71,24 @@ a:hover {
 /* Mobile two-line subtitle using a pseudo-element */
 @media (max-width: 600px) {
   .hero-subtitle {
+    /* hide the original inline text visually, keep element in flow */
     color: transparent;
-    position: relative;
+    position: relative; /* not strictly required, but safe */
   }
 
   .hero-subtitle::before {
     content: "Department of Psychology\AUniversity of Southern California";
-    white-space: pre;
-    display: block;
-    color: #333;
-    font-size: 1rem;
+    white-space: pre;            /* allow \A to become a line break */
+    display: block;             /* put it on its own block line(s) */
+    color: #333;                /* explicitly set visible color */
+    font-size: 1rem;            /* match normal subtitle size (adjust if needed) */
     line-height: 1.4;
+    /* optional: preserve bold/red styling if needed */
+    /* font-weight: normal; */
   }
 }
 
-/* Responsive hero adjustments */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .hero h1 {
     font-size: 3.5rem;
@@ -107,12 +108,12 @@ a:hover {
 }
 
 .site-header {
-  position: sticky;
+  position: sticky;  /* make the header stick to top */
   top: 0;
-  z-index: 1000;
+  z-index: 1000;     /* ensure it stays above other content */
   width: 100%;
-  background-color: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: white; /* keep background opaque */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 /* Navbar */
@@ -126,9 +127,8 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -149,7 +149,6 @@ a:hover {
   .logo-full {
     display: none;
   }
-
   .logo-short {
     display: inline;
     font-weight: bold;
@@ -158,22 +157,22 @@ a:hover {
 }
 
 .mobile-menu-icon {
-  display: none;
+  display: none;       /* hidden by default */
   font-size: 2rem;
   cursor: pointer;
 }
 
 @media (max-width: 600px) {
   .nav-links {
-    display: none;
+    display: none;     /* hide normal links */
     flex-direction: column;
     gap: 0;
     background-color: white;
     position: absolute;
-    top: 60px;
+    top: 60px;         /* just below navbar */
     right: 0;
     width: 200px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     border-radius: 8px;
     padding: 0.5rem 0;
   }
@@ -188,18 +187,19 @@ a:hover {
   }
 
   .mobile-menu-icon {
-    display: block;
+    display: block;    /* show hamburger */
   }
 }
+
 
 /* CTA Banner in Hero */
 .cta-banner {
   margin-top: 2rem;
-  background-color: #990000;
+  background-color: #990000; /* USC red */
   padding: 1rem 2rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: absolute;
   bottom: 70px;
@@ -217,8 +217,9 @@ a:hover {
 }
 
 .cta-banner:hover {
-  transform: translateX(-50%) scale(1.02);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+  /*transform: translateY(-3px); */
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
 /* Sections */
@@ -227,18 +228,17 @@ section {
   transform: translateY(20px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   padding: 50px 20px;
-  scroll-margin-top: 30px;
+  scroll-margin-top: 30px; /* height of your sticky navbar */
 }
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
   scroll-margin-top: 10px;
+
 }
 
 /* Headings */
-h1,
-h2 {
+h1, h2 {
   font-size: 1.7rem;
   color: #990000;
   margin-bottom: 1rem;
@@ -247,12 +247,12 @@ h2 {
 h3 {
   font-size: 1.2rem;
   color: #990000;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 /* Research */
 .research-home p {
-  font-size: 1.2rem;
+  font-size: 1.2rem;   /* ~20px, larger than body text */
   line-height: 1.6;
 }
 
@@ -263,12 +263,12 @@ h3 {
 
 .research-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack main + pubs vertically */
   background-color: #f9f9f9;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   gap: 1rem;
 }
 
@@ -294,19 +294,20 @@ h3 {
 }
 
 .research-pubs h3 {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-top: 0rem;       /* remove any extra top margin */
+  margin-bottom: 0rem; /* space below heading */
 }
 
 /* Square research image container */
 .research-image {
   width: 240px;
   height: 240px;
-  border-radius: 8px;
+  border-radius: 8px;           /* square, not circle */
   border: 2px solid #990000;
   flex-shrink: 0;
-  background-size: cover;
-  background-position: center;
+
+  background-size: cover;     /* zoom fill */
+  background-position: center;/* default center crop */
   background-repeat: no-repeat;
   margin-bottom: 0rem;
 }
@@ -315,35 +316,38 @@ h3 {
 .img-title {
   background-image: url('/images/annie_title.jpg');
   background-position: 94% 0%;
-  background-size: 330%;
+  background-size: 330%; /* slight zoom in */
 }
 
 .img-window {
   background-image: url('/images/annie_window.jpg');
-  background-position: 40% center;
-  background-size: 125%;
+  background-position: 40% center; /* shift focus horizontally */
+  background-size: 125%; /* zoom in more */
 }
 
 .img-laundry {
   background-image: url('/images/annie_laundry.jpg');
   background-position: 30% 0%;
-  background-size: 223%;
+  background-size: 223%; /* keep natural */
 }
 
 /* Mobile-friendly research layout */
 @media (max-width: 768px) {
+  /* Stack image above text */
   .research-main {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center the image horizontally */
   }
 
+  /* Full width image */
   .research-image {
-    width: 100%;
-    max-width: 100%;
-    height: 200px;
-    margin-bottom: 0rem;
+    width: 100%;            /* span container */
+    max-width: 100%;        /* prevent overflow */
+    height: 200px;          /* fixed height for mobile */
+    margin-bottom: 0rem;    /* spacing below image */
   }
 
+  /* Text takes full width */
   .research-text {
     width: 100%;
   }
@@ -358,13 +362,13 @@ h3 {
 .research-card p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-top: 0.5rem;
+  margin-top: .5rem;
 }
 
 /* Optional: responsive for smaller screens */
 @media (max-width: 768px) {
   .research-card {
-    flex-direction: column;
+    flex-direction: column;  /* stack image on top for mobile */
   }
 
   .research-card img.research-image {
@@ -397,57 +401,49 @@ h3 {
   margin-left: 6px;
 }
 
-/* People homepage teaser */
-#people .people-layout {
+/* People section layout */
+.people-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  /* grid-template-columns: 1.2fr .8fr; /* two equal columns */
+  grid-template-columns: 1fr;
   gap: 1rem;
-  align-items: start;
+  align-items: start; /* align content at the top */
 }
 
-#people .people-text {
+.people-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding-bottom: 2rem;
+  max-width: 900px;
+}
+
+.people-text {
   font-size: 1rem;
   line-height: 1.6;
   padding: 1.2rem;
 }
 
-#people .people-text h3 {
+.people-text h3 {
   margin-top: 0;
 }
 
-#people .people-text p {
+.people-text p {
   margin-top: 0rem;
 }
 
-/* Full People page */
-#people-page {
-  padding-bottom: 3rem;
+/* Make it stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .people-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
-#people-page .people-page-intro {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-}
-
-#people-page .people-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: start;
-  padding: 0 0rem 1.5rem;
-  box-sizing: border-box;
-}
-
-#people-page .person-card {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Shared person card styling */
 .person-card-content {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1rem; /* space between photo and text */
   margin-bottom: 0rem;
 }
 
@@ -456,14 +452,14 @@ h3 {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #990000;
-  flex-shrink: 0;
+  border: 2px solid #990000; /* optional USC red border */
+  flex-shrink: 0; /* keeps the photo size fixed */
 }
 
 .person-info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.35rem;
 }
 
 .person-info h3 {
@@ -471,11 +467,6 @@ h3 {
   font-size: 1.2rem;
   color: #990000;
   line-height: 1.2;
-}
-
-.person-info > div {
-  margin: 0;
-  line-height: 1.35;
 }
 
 .person-meta {
@@ -488,13 +479,12 @@ h3 {
 
 .person-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 6px;
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
 }
 
 .person-info p {
-  margin: 0.1rem 0 0;
+  margin: 0.15rem 0 0;
   line-height: 1.5;
 }
 
@@ -506,8 +496,8 @@ h3 {
 }
 
 .person-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .person-badge {
@@ -522,36 +512,20 @@ h3 {
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
-
 .person-badge:hover {
   background-color: #e0e0e0;
 }
 
-.people-list p {
-  margin: 0.2rem 0;
-}
-
-/* Make People layouts stack on smaller screens */
-@media (max-width: 768px) {
-  #people .people-layout {
-    grid-template-columns: 1fr;
-  }
-
-  #people-page .people-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .person-card-content {
-    flex-direction: column;
-  }
-
-  .person-photo {
-    width: 110px;
-    height: 110px;
-  }
-}
-
 /* Publications */
+/*#publications ul li {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#publications ul li:hover {
+  transform: translateX(5px);
+  color: #990000;
+}*/
+
+/* Publications grid */
 .publications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -564,13 +538,13 @@ h3 {
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .publication-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .publication-card h3 {
@@ -603,33 +577,32 @@ h3 {
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
-
 .pub-badge:hover {
   background-color: #e0e0e0;
 }
 
 .more-container {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-end; /* right aligned by default */
   margin-top: 1rem;
 }
 
 .more-button {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: #f9f9f9;
-  color: #990000;
+  background-color: #f9f9f9; /* match cards */
+  color: #990000;            /* USC red */
   font-weight: bold;
   font-size: 1.2rem;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .more-button:hover {
   background-color: #ececec;
-  color: #b30000;
+  color: #b30000; /* darker USC red */
 }
 
 #all-publications h2 {
@@ -646,12 +619,12 @@ h3 {
 }
 
 .site-footer p {
-  margin: 0;
-  padding: 0;
+  margin: 0;        /* removes all default top/bottom margins */
+  padding: 0;       /* optional, ensures no padding */
 }
 
 .site-footer .footer-credit {
-  font-size: 0.6rem;
-  color: #666;
-  margin-top: 0.2rem;
+  font-size: 0.6rem;         /* smaller font */
+  color: #666;               /* lighter gray */
+  margin-top: 0.2rem;       /* small space below copyright */
 }
