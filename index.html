@@ -65,11 +65,11 @@ title: Home
   </div>
 </section>
 
-<section id="publications">
+<!-- <section id="publications">
   <div class="container">
     <h2>Publications</h2>
     <div class="publications-grid">
-	  {% assign key_pubs = "zada2024neuron,kumar2024natcommun" | split: "," %}
+	  {% assign key_pubs = "nastase2026neuron,bhattacharjee2026natcomputsci,zada2024neuron,kumar2024natcommun" | split: "," %}
 	  {% for pub_id in key_pubs %}
         {% assign pub = site.data.publications | where: "id", pub_id | first %}
         {% if pub %}
@@ -89,6 +89,64 @@ title: Home
       <a href="{% link publications.html %}" class="more-button">More publications →</a>
     </div>
   </div>  
+</section> -->
+
+<section id="publications">
+  <div class="container">
+    <h2>Publications</h2>
+
+    <div class="publications-grid">
+
+      <!-- Left column -->
+      <div class="publications-column">
+        {% assign left_pubs = "nastase2026neuron,zada2024neuron" | split: "," %}
+
+        {% for pub_id in left_pubs %}
+          {% assign pub = site.data.publications | where: "id", pub_id | first %}
+
+          {% if pub %}
+            <div class="publication-card">
+              <h3>{{ pub.title }}</h3>
+
+              <p class="pub-reference">
+                {{ pub.reference | markdownify | remove: '<p>' | remove: '</p>' }}
+                <a href="{{ pub.doi }}" target="_blank" class="pub-badge">DOI</a>
+                <a href="{{ pub.pdf }}" target="_blank" class="pub-badge">PDF</a>
+              </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Right column -->
+      <div class="publications-column">
+        {% assign right_pubs = "bhattacharjee2026natcomputsci,kumar2024natcommun" | split: "," %}
+
+        {% for pub_id in right_pubs %}
+          {% assign pub = site.data.publications | where: "id", pub_id | first %}
+
+          {% if pub %}
+            <div class="publication-card">
+              <h3>{{ pub.title }}</h3>
+
+              <p class="pub-reference">
+                {{ pub.reference | markdownify | remove: '<p>' | remove: '</p>' }}
+                <a href="{{ pub.doi }}" target="_blank" class="pub-badge">DOI</a>
+                <a href="{{ pub.pdf }}" target="_blank" class="pub-badge">PDF</a>
+              </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <div class="more-container">
+      <a href="{% link publications.html %}" class="more-button">
+        More publications →
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="join">

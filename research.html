@@ -19,7 +19,7 @@ permalink: /research/
       <div class="research-pubs">
         <h3>Key publications</h3>
         <ul>
-          {% assign key_pubs = "zada2024neuron,kumar2024natcommun" | split: "," %}
+          {% assign key_pubs = "nastase2026neuron,zada2024neuron" | split: "," %}
           {% for pub_id in key_pubs %}
             {% assign pub = site.data.publications | where: "id", pub_id | first %}
             {% if pub %}

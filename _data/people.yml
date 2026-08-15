@@ -16,6 +16,12 @@
   bio: How do we build representations of others? How do we think about their goals, intentions, and beliefs, and communicate what we build in our minds? In my PhD at UC Irvine, I tackled these questions by designing controlled visual fMRI experiments. Specifically, I studied how the brain categorizes representations of physical versus social events, and how it transitions between the two through degrees of intentions. During my postdoc at USC, using naturalistic experiments and deep learning models, I now investigate how the brain transforms visual stimuli into structured context during social interaction, bridging perception, language, and social cognition.
   photo: /images/sajjad.jpg
 
+- name: EuiYoung Kim
+  title: PhD Student
+  email: euiyoung.kim@usc.edu
+  bio: EuiYoung's research interests center on how the brain constructs and represents meaning from language, particularly during naturalistic, continuous experiences. Her research interests include semantic processing, neural dynamics underlying language comprehension, and the use of EEG and intracranial EEG (iEEG) to investigate how linguistic information unfolds and is integrated over time. More broadly, she is interested in combining neural and computational approaches to understand language and cognition. Outside of the lab, she enjoys singing in a choir and practicing jazz dance.
+  photo: /images/euiyoung.jpg
+
 - name: April Luo
   title: PhD Student
   email: chaodanl@usc.edu
