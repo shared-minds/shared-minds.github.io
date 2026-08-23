@@ -397,6 +397,26 @@ h3 {
   margin-left: 6px;
 }
 
+/* Research funding */
+.research-funding {
+  margin-top: 0rem;
+}
+
+.research-funding h2 {
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.funding-list p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+#research-page {
+  padding-bottom: 3rem;
+}
+
 /* People homepage teaser */
 #people .people-layout {
   display: grid;
