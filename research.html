@@ -71,7 +71,7 @@ permalink: /research/
       <div class="research-pubs">
         <h3>Key publications</h3>
         <ul>
-          {% assign key_pubs = "han2024biorxiv,jung2025biorxiv" | split: "," %}
+          {% assign key_pubs = "han2026natcommun,jung2026pnas" | split: "," %}
           {% for pub_id in key_pubs %}
             {% assign pub = site.data.publications | where: "id", pub_id | first %}
             {% if pub %}

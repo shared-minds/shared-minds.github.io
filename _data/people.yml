@@ -16,6 +16,12 @@
   bio: How do we build representations of others? How do we think about their goals, intentions, and beliefs, and communicate what we build in our minds? In my PhD at UC Irvine, I tackled these questions by designing controlled visual fMRI experiments. Specifically, I studied how the brain categorizes representations of physical versus social events, and how it transitions between the two through degrees of intentions. During my postdoc at USC, using naturalistic experiments and deep learning models, I now investigate how the brain transforms visual stimuli into structured context during social interaction, bridging perception, language, and social cognition.
   photo: /images/sajjad.jpg
 
+- name: Britney Lucknauth
+  title: Lab Manager
+  email: lucknaut@usc.edu
+  bio: Britney earned her BA in Computer Science with a minor in Psychology from NYU. Before joining the Shared Minds Lab, she worked as a software engineer at Amazon Alexa. Outside of the lab, she enjoys sewing her own clothes and reading classic literature.
+  photo: /images/britney.jpg
+
 - name: EuiYoung Kim
   title: PhD Student
   email: euiyoung.kim@usc.edu
@@ -33,10 +39,4 @@
   email: torabian@usc.edu
   bio: Landi is a senior at USC studying cognitive science. She is interested in conversation and linguistic meaning. Outside of school, she enjoys drawing cartoons, people-watching, and cooking soup.
   photo: /images/landi.jpg
-
-- name: Britney Lucknauth
-  title: Lab Manager
-  email: lucknaut@usc.edu
-  bio: Britney earned her B.A. in Computer Science with a minor in Psychology from NYU. Before joining the Shared Minds Lab, she worked as a software engineer at Amazon Alexa. Outside of the lab, she enjoys sewing her own clothes and reading classic literature.
-  photo: /images/britney.jpg
 
